@@ -105,12 +105,7 @@ while True:
     print("[4] Salir del programa") 
     opcion = input()
     
-    # opcion = input(
-    #     "\nIntroduce una opción:" \
-    #     "\n[1] Agregar una categoría" \
-    #     "\n[2] Agregar un plato" \
-    #     "\n[3] Mostrar el menú" \
-    #     "\n[4] Salir del programa\n\n> ")
+
     if opcion == '1':
         agregar_categoria()
 
