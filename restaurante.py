@@ -63,9 +63,9 @@ def agregar_plato():
         cursor.execute("INSERT INTO plato VALUES (null, '{}', {})".format(plato, categoria_usuario) )
 
     except sqlite3.IntegrityError:
-        print("El PLato '{}' ya existe".format(plato))
+        print("El Plato '{}' ya existe".format(plato))
     else:
-        print("PLato '{}' creado correctamente".format(plato))
+        print("Plato '{}' creado correctamente".format(plato))
 
     conexion.commit()
     conexion.close()
@@ -81,7 +81,7 @@ def mostrar_menu():
         platos = cursor.execute(
             "SELECT * FROM plato WHERE categoria_id={}".format(categoria[0])).fetchall()
 
-        for platos in platos:
+        for plato in platos:
             print("\t{}".format(plato[1]))
 
     conexion.close()
@@ -94,8 +94,8 @@ crear_db()
 while True:
 
     #opcion = '0'
-    
-    print("\nBienvenido al gestor del restaurante!")
+    print("")
+    print("Bienvenido al gestor del restaurante!")
 
         
     print("Introduce una opción: ")
